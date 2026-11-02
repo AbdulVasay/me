@@ -4,129 +4,197 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Abdul Vasay</title>
-  <meta name="description" content="Abdul Vasay – profile, experience, projects and contact.">
+  <meta name="description" content="Abdul Vasay – broadcast graphics, Vizrt scripting and web tools.">
   <meta property="og:title" content="Abdul Vasay">
-  <meta property="og:description" content="Profile, experience, projects and contact.">
+  <meta property="og:description" content="Broadcast graphics, Vizrt scripting and web tools.">
   <meta property="og:url" content="https://abdulvasay.github.io/me/">
+  <meta name="theme-color" content="#0b0b14">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div class="grid-lines"></div>
+  </div>
+
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">AV</a>
-      <nav>
+      <a class="brand" href="#top"><span class="brand-mark">AV</span> Abdul Vasay</a>
+      <nav id="menu">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">◐</button>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero wrap">
-      <div class="avatar" aria-hidden="true">AV</div>
-      <div>
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>Abdul Vasay</h1>
-        <!-- TODO: replace with your title -->
-        <p class="lead">[Your Title] · building [what you build] for [who you build it for].</p>
+      <div class="hero-text reveal">
+        <!-- TODO: remove or change the availability badge -->
+        <p class="pill"><span class="dot"></span> Available for new projects</p>
+        <h1>Hi, I'm <span class="grad">Abdul Vasay</span></h1>
+        <!-- TODO: confirm/adjust the rotating roles -->
+        <p class="lead">
+          I work on
+          <span class="rotator" data-words="real-time broadcast graphics|Vizrt scene scripting|handy web tools"></span>
+        </p>
+        <!-- TODO: replace with your one-line pitch -->
+        <p class="sub">[One-line pitch: who you help and what you deliver. Paste from your LinkedIn headline.]</p>
         <div class="cta">
-          <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn" href="https://github.com/abdulvasay" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn primary" href="#contact">Let's talk <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#projects">See my work</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/AbdulVasay" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+          </a>
+          <!-- TODO: your LinkedIn profile URL -->
+          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+          </a>
+          <!-- TODO: your email -->
+          <a href="mailto:you@example.com" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="orbit">
+          <div class="avatar"><span>AV</span></div>
+          <span class="chip c1">Viz Artist</span>
+          <span class="chip c2">JavaScript</span>
+          <span class="chip c3">Live Graphics</span>
+          <span class="chip c4">HTML · CSS</span>
         </div>
       </div>
     </section>
 
+    <!-- STATS -->
+    <section class="wrap stats reveal">
+      <!-- TODO: replace with your real numbers -->
+      <div class="stat"><b>[X]+</b><span>Years experience</span></div>
+      <div class="stat"><b>[X]+</b><span>Broadcast projects</span></div>
+      <div class="stat"><b>5</b><span>Public repos</span></div>
+      <div class="stat"><b>[X]</b><span>Happy clients</span></div>
+    </section>
+
     <!-- ABOUT -->
     <section id="about" class="wrap section">
-      <h2>About</h2>
-      <!-- TODO: replace with your bio -->
-      <p>[A short bio: 2–4 sentences about who you are, what you work on, and what you care about. Mention years of experience, your domain, and what you're looking for next.]</p>
-      <h3>Skills</h3>
-      <!-- TODO: replace with your skills -->
-      <ul class="tags">
-        <li>[Skill 1]</li><li>[Skill 2]</li><li>[Skill 3]</li><li>[Skill 4]</li>
-        <li>[Skill 5]</li><li>[Skill 6]</li><li>[Skill 7]</li><li>[Skill 8]</li>
-      </ul>
+      <p class="kicker">01 — About</p>
+      <h2 class="reveal">A little about me</h2>
+      <div class="about-grid">
+        <div class="glass reveal">
+          <!-- TODO: replace with your bio (LinkedIn "About" section) -->
+          <p>[Your bio: 2–4 sentences. Who you are, your years in broadcast graphics, the kind of shows/clients you've worked on, and what you're looking for next. Paste from your LinkedIn "About".]</p>
+          <p>Outside work I build small, practical web tools, like bill calculators and bus timetables for my community in Bahria Town Karachi.</p>
+        </div>
+        <div class="glass reveal">
+          <h3>Toolkit</h3>
+          <!-- TODO: adjust skills -->
+          <ul class="tags">
+            <li>Vizrt Viz Artist</li><li>Viz scripting</li><li>Real-time graphics</li>
+            <li>Data-driven templates</li><li>JavaScript</li><li>HTML &amp; CSS</li>
+            <li>GitHub Pages</li><li>[Skill]</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience" class="wrap section">
-      <h2>Experience</h2>
-      <!-- TODO: replace with your roles, newest first -->
+      <p class="kicker">02 — Experience</p>
+      <h2 class="reveal">Where I've worked</h2>
+      <!-- TODO: replace with your roles from LinkedIn, newest first -->
       <ol class="timeline">
-        <li>
-          <div class="when">[2023 – Present]</div>
-          <div>
-            <h3>[Job Title] · [Company]</h3>
-            <p>[One or two lines on what you did and the impact it had.]</p>
-          </div>
+        <li class="reveal">
+          <span class="when">[2022 – Present]</span>
+          <h3>[Job Title] <span class="at">@ [Company]</span></h3>
+          <p>[One or two lines on what you did and the impact it had.]</p>
         </li>
-        <li>
-          <div class="when">[2020 – 2023]</div>
-          <div>
-            <h3>[Job Title] · [Company]</h3>
-            <p>[One or two lines on what you did and the impact it had.]</p>
-          </div>
+        <li class="reveal">
+          <span class="when">[2019 – 2022]</span>
+          <h3>[Job Title] <span class="at">@ [Company]</span></h3>
+          <p>[One or two lines on what you did and the impact it had.]</p>
         </li>
-        <li>
-          <div class="when">[2016 – 2020]</div>
-          <div>
-            <h3>[Degree] · [University]</h3>
-            <p>[Focus area, honours, or notable work.]</p>
-          </div>
+        <li class="reveal">
+          <span class="when">[Year – Year]</span>
+          <h3>[Degree] <span class="at">@ [University]</span></h3>
+          <p>[Focus area, honours, or notable work.]</p>
         </li>
       </ol>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="wrap section">
-      <h2>Projects</h2>
-      <!-- TODO: replace with your projects -->
-      <div class="grid">
-        <article class="card">
-          <h3>[Project One]</h3>
-          <p>[What it does and why it matters.]</p>
-          <p class="meta">[Tech · Stack · Used]</p>
-          <a href="#" class="link">View project →</a>
+      <p class="kicker">03 — Projects</p>
+      <h2 class="reveal">Things I've built</h2>
+      <div class="projects">
+        <article class="card reveal">
+          <div class="card-top"><span class="emoji" aria-hidden="true">🎬</span><span class="badge">Course</span></div>
+          <h3>Vizrt Scripts Course</h3>
+          <p>A walkthrough of scripting Vizrt scenes end to end, from basics to complete scene logic.</p>
+          <ul class="meta"><li>Vizrt</li><li>Scripting</li></ul>
+          <a class="link" href="https://github.com/AbdulVasay/vizrt-scripts-course" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
-        <article class="card">
-          <h3>[Project Two]</h3>
-          <p>[What it does and why it matters.]</p>
-          <p class="meta">[Tech · Stack · Used]</p>
-          <a href="#" class="link">View project →</a>
+        <article class="card reveal">
+          <div class="card-top"><span class="emoji" aria-hidden="true">⚡</span><span class="badge live">Live</span></div>
+          <h3>BTK Utilities Calculator</h3>
+          <p>Bahria Town Karachi bills calculator for electricity (incl. solar net metering), water and maintenance.</p>
+          <ul class="meta"><li>JavaScript</li><li>Web app</li></ul>
+          <a class="link" href="https://abdulvasay.github.io/UtilitiesBTK/" target="_blank" rel="noopener">Open app →</a>
         </article>
-        <article class="card">
-          <h3>[Project Three]</h3>
-          <p>[What it does and why it matters.]</p>
-          <p class="meta">[Tech · Stack · Used]</p>
-          <a href="#" class="link">View project →</a>
+        <article class="card reveal">
+          <div class="card-top"><span class="emoji" aria-hidden="true">💡</span><span class="badge live">Live</span></div>
+          <h3>BTK Electricity Bill Calculator</h3>
+          <p>A focused calculator to estimate Bahria Town Karachi electricity bills in seconds.</p>
+          <ul class="meta"><li>HTML</li><li>JavaScript</li></ul>
+          <a class="link" href="https://abdulvasay.github.io/btk-Electric/" target="_blank" rel="noopener">Open app →</a>
+        </article>
+        <article class="card reveal">
+          <div class="card-top"><span class="emoji" aria-hidden="true">🚌</span><span class="badge">Tool</span></div>
+          <h3>BTK Bus Timings</h3>
+          <p>Bahria Town Karachi bus routes and timings in one easy-to-read page.</p>
+          <ul class="meta"><li>HTML</li><li>CSS</li></ul>
+          <a class="link" href="https://github.com/AbdulVasay/btk-bus-timings" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="wrap section">
-      <h2>Contact</h2>
-      <p>Open to new opportunities and collaborations. The best way to reach me:</p>
-      <!-- TODO: replace with your links -->
-      <ul class="contact">
-        <li><a href="mailto:you@example.com">you@example.com</a></li>
-        <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/abdulvasay" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
+      <div class="contact-card reveal">
+        <p class="kicker">04 — Contact</p>
+        <h2>Let's build something <span class="grad">great</span> together.</h2>
+        <p>Have a broadcast graphics project, a Vizrt question, or just want to say hi? My inbox is open.</p>
+        <div class="cta center">
+          <!-- TODO: your email + LinkedIn -->
+          <a class="btn primary" href="mailto:you@example.com">Say hello <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/AbdulVasay" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="wrap footer">
-    <p>© <span id="year"></span> Abdul Vasay</p>
+    <p>© <span id="year"></span> Abdul Vasay · Built with plain HTML &amp; CSS</p>
+    <a href="#top">Back to top ↑</a>
   </footer>
 
   <script src="assets/main.js"></script>
