@@ -2,5 +2,7 @@
 
 - **GitHub Pages:** source = branch `main`, folder `/` (root). Set in repo Settings → Pages.
 - **`.nojekyll`:** disables Jekyll processing.
-- **Theme:** visitor choice saved in browser `localStorage` key `theme` (`light` / `dark`); otherwise follows OS setting.
+- **`.gitignore`:** `*.pdf` — keeps the résumé (personal details) out of the public repo.
+- **Theme:** dark only (no toggle).
+- **Intro sting:** shown once per browser session; `sessionStorage` key `introSeen`.
 - No environment variables or secrets.

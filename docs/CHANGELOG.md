@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-02 (résumé + dark theme)
+### Changed
+- All content now from the owner's résumé: summary, key skills, full experience 2012–present, 16 projects with filters, education and certificates. ([0003](changesets/0003-resume-content-dark-animated.md))
+- Dark-only "broadcast control room" theme with heavy animation (intro sting, network canvas, ticker, glitch title, tilt/spotlight cards, scroll-filled timeline).
+### Removed
+- Light mode and theme toggle.
+### Config
+- `.gitignore` excludes `*.pdf` so the private résumé is never published.
+
 ## 2026-11-02 (redesign)
 ### Changed
 - Visual redesign: gradient hero with typing roles, animated background, glass cards, timeline, scroll animations, mobile menu. ([0002](changesets/0002-redesign-and-github-projects.md))

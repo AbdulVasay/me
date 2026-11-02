@@ -2,7 +2,7 @@
 
 Static personal profile site, live at **https://abdulvasay.github.io/me/**.
 
-- `index.html` — the page (edit the `[placeholder]` text marked with `TODO` comments)
+- `index.html` — the page (all content from the résumé)
 - `assets/` — stylesheet, script, favicon
 - `docs/` — project knowledge base (start with `docs/agent-context.md`)
 
